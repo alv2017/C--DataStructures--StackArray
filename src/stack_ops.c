@@ -36,8 +36,9 @@ int peek(int st[], short *op_status) {
 	*op_status = 0;
 	if (top == -1) {
 		printf("The stack is empty.\n");
+	} else {
+		*op_status = 1;
 	}
-	*op_status = 1;
 	return st[top];
 }
 
