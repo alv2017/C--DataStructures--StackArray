@@ -33,10 +33,6 @@ int main(void) {
 				printf("Adding a new element to stack.\n");
 				int element_value = enter_value(&op_status);
 				push(st, element_value, &op_status);
-
-				// Asking user for further actions;
-				display_menu(menu);
-				opt = select_option(MINOPT, MAXOPT);
 				break;
 			case 2:
 				clear();
@@ -45,10 +41,6 @@ int main(void) {
 				if (op_status == 1) {
 					printf("Removed element id: %d, value: %d.\n", top+1, removed_value);
 				}
-
-				// Asking user for further actions;
-				display_menu(menu);
-				opt = select_option(MINOPT, MAXOPT);
 				break;
 			case 3:
 				clear();
@@ -57,19 +49,11 @@ int main(void) {
 				if (op_status == 1) {
 					printf("Top stack element Id: %d, value: %d.\n", top, top_element);
 				}
-
-				// Asking user for further actions;
-				display_menu(menu);
-				opt = select_option(MINOPT, MAXOPT);
 				break;
 			case 4:
 				clear();
 				printf("Displaying stack items.\n");
 				display_stack(st);
-
-				// Asking user for further actions;
-				display_menu(menu);
-				opt = select_option(MINOPT, MAXOPT);
 				break;
 			case 5:
 				clear();
@@ -78,12 +62,11 @@ int main(void) {
 			default:
 				clear();
 				printf("Unknown option.\n");
-
-				// Asking user for further actions;
-				display_menu(menu);
-				opt = select_option(MINOPT, MAXOPT);
 				break;
 		}
+		// Asking user for further actions;
+		display_menu(menu);
+		opt = select_option(MINOPT, MAXOPT);
 	}
 	return 0;
 }
